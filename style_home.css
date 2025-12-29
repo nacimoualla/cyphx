@@ -215,7 +215,6 @@ a:hover{
     display: inline-block;
     z-index: 1;
 }
-
 .becomeMember-btn{
     color: var(--neon-green);
     background: transparent;
@@ -246,7 +245,7 @@ svg{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    
+    margin: 0 1rem;
 }
 .Card{
     background: var(--glassy-bg);
@@ -301,7 +300,7 @@ svg{
 .roadmapGrid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.8rem;
     margin-top: 1rem;
 }
 .roadmapCard{
@@ -358,6 +357,14 @@ svg{
 }
 .teamSection{
     padding: 3rem 0;
+}
+.teamSection .sectionTitle{
+    width: 350px;
+    margin-left: 1.5rem;
+}
+.section-title{
+    width: 350px;
+    margin-left: 1.5rem;
 }
 .teamGrid{
     display: flex;
@@ -468,4 +475,57 @@ footer{
     color: #444;
     font-size: 0.8rem;
     margin-top: 1.5rem;
+}
+.registerCard{
+    background: var(--glassy-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--card-color);
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 90%;
+    max-width: 650px;
+    padding: 40px;
+}
+.registerCard input{
+    background: var(--dk-bg);
+    border: 1px solid var(--glassy-bg);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.3s;
+}
+.registerCard input:focus{
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+.sendBtn{
+    color: var(--neon-green);
+    background: transparent;
+    border: 2px solid var(--neon-green);
+    box-shadow: 
+    0 0 5px var(--neon-green),
+    inset 0 0 5px var(--neon-green);
+    transition: 0.3s;
+    padding: 10px;
+    font-size: large;
+}
+.sendBtn:hover{
+    background-color: var(--neon-green);
+    color: var(--dk-bg);
+    box-shadow: 
+    0 0 20px var(--neon-green),
+    0 0 50px var(--neon-green),
+    inset 0 0 50px var(--neon-green);
+    cursor: pointer;
 }

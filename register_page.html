@@ -9,6 +9,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          // REPLACE THIS WITH YOUR PUBLIC KEY FROM STEP 1
+          emailjs.init({
+            publicKey: "g929dTo4sMeR35Upt",
+          });
+       })();
+    </script>
 </head>
 <body>
     <body>
@@ -26,10 +37,10 @@
     <div class="registerCard">
         
         <form id="registerForm" onsubmit="return false;"> 
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="youremail@example.com" required>
-            <input type="tel" placeholder="Your phone number" required>
-            <button class="sendBtn">Register</button>
+            <input type="text" name="user_name" placeholder="Full Name" required>
+            <input type="email" name="user_email" placeholder="youremail@example.com" required>
+            <input type="tel" name="user_phone" placeholder="Your phone number" required>
+            <button class="sendBtn" type="submit" id="submit-btn">Register</button>
         </form>
 
         <div class="successMesg" id="successMesg">
@@ -44,20 +55,30 @@
     </div>
     <script src="dotLogic.js"></script>
     <script>
+        const form = document.getElementById('registerForm')
         const message = document.getElementById('successMesg')
-        document.getElementById('registerForm').addEventListener('submit', function(e){
+        form.addEventListener('submit', function(e){
             e.preventDefault()
-            const form = document.getElementById('registerForm')
-            form.style.opacity = '0'
-            form.style.transition = 'opacity 0.5s ease'
-            setTimeout(()=> {
-                form.style.display = 'none';
-                message.style.display = 'block';
-                requestAnimationFrame(()=> {
-                    message.style.opacity = '1';
-                    message.style.transform = 'scale(1)';
-                })
-            },500)
+            const btn = document.getElementById('submit-btn')
+            const originalText = btn.innerText
+            btn.innerText = 'Sending Data...'
+            emailjs.sendForm('service_q4fvkmh', 'template_4lmjiel', this)
+            .then(()=>{
+                form.style.opacity = '0'
+                form.style.transition = 'opacity 0.5s ease'
+                setTimeout(()=> {
+                    form.style.display = 'none';
+                    message.style.display = 'block';
+                    requestAnimationFrame(()=> {
+                        message.style.opacity = '1';
+                        message.style.transform = 'scale(1)';
+                    })
+                },500)
+            }, (error) =>{
+                btn.innerText = originalText
+                alert('failed...'+JSON.stringify(error))
+            })
+            
         })
         message.style.opacity = '0';
         message.style.transform = 'scale(0.9)'

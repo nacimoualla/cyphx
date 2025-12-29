@@ -1,6 +1,5 @@
 const canvas = document.getElementById("connected-dots")
 const ctx = canvas.getContext("2d")
-const regBtn = document.getElementById("register-btn-js")
 canvas.height = window.innerHeight
 canvas.width = window.innerWidth
         let particlesArray = []
@@ -67,6 +66,3 @@ canvas.width = window.innerWidth
             particlesArray = []
             init()
         })
-regBtn.addEventListener('click',function(){
-    window.location.href = 'register_page.html'
-})

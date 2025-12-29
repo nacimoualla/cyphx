@@ -312,8 +312,9 @@ svg{
     border-radius: 10px;
     padding: 1.5rem;
     min-height: 180px;
-    width: 800px;
-    margin-left: 50px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 .roadmapCard h3{
     font-family: 'Orbitron',sans-serif;

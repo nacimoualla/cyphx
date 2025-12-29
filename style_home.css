@@ -28,6 +28,34 @@ body{
     height: 70px;
     align-items: center;
 }
+.navlinks{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.navlinks a{
+    color: #e2e8f0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.navlinks a:hover{
+    color: var(--neon-green);
+    text-shadow: 0 0 10px var(--neon-green);
+    transform: translateY(-2px);
+}
+.logo-nav{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 00.3);
+}
 @keyframes underscoreAnimation {
     0% {opacity: 1;}
     50% {opacity: 0;}
@@ -52,25 +80,27 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: #fff;
-    text-shadow: 
-    0 0 5px var(--neon-green),
-    0 0 10px var(--neon-green),
-    0 0 20px var(--neon-green),
-    0 0 40px var(--neon-green);
+    color: var(--neon-green);
+    text-shadow: 0 0 10px var(--neon-green);
+    transform: translateY(-2px);
 }
 .Regist-btn-nav{
-    color: var(--dk-bg);
-    background-color: var(--neon-green);
-    box-shadow: 
-    0 0 20px var(--neon-green),
-    0 0 50px var(--neon-green),
-    inset 0 0 50px var(--neon-green);
-}
-.Regist-btn-nav:hover{
+    background: transparent;
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    padding: 8px 20px;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
-    opacity: 0.8;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+}
+.Regist-btn-nav:hover{
+    background: var(--neon-green);
+    color: #0b0c10;
+    box-shadow: 0 0 20px var(--neon-green);
+    transform: scale(1.05);
 }
 .Hero{
     min-height: 100vh;
@@ -186,9 +216,11 @@ svg{
     margin-top: 1rem;
 }
 .roadmapCard{
-    background: var(--glassy-bg);
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, var(--glassy-bg));
     backdrop-filter: blur(10px);
     border: 1px solid var(--card-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid var(--neon-green);
     border-radius: 10px;
     padding: 1.5rem;
     min-height: 180px;
@@ -233,8 +265,8 @@ svg{
     padding: 3rem 0;
 }
 .teamGrid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
     align-items: start;
@@ -253,6 +285,9 @@ svg{
     justify-content: flex-start;
     cursor: pointer;
     position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin-left: 150px;
 }
 .memberName{
     font-family: 'Orbitron',sans-serif;
@@ -305,4 +340,37 @@ svg{
 .teamCard:hover .hiddenInfo{
     opacity: 1;
     transform: translateY(0);
+}
+footer{
+    background: #050608;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+.footerLogo{
+    width: 120px;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transition: 0.3s;
+}
+.footerLogo:hover{
+    filter: grayscale(0%);
+    opacity: 1;
+}
+.footerLinks a{
+    color: #666;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.footerLinks a:hover{
+    color: var(--neon-green);
+}
+.Copyright{
+    color: #444;
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
 }

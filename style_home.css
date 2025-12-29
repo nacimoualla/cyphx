@@ -1,0 +1,298 @@
+:root {
+    --neon-green: #00ff00;
+    --dk-bg: #0b0c10;
+    --card-color: rgba(255,255,255,0.1);
+    --glassy-bg: rgba(255,255,255,0.03)
+}
+body{
+    background-color: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+    min-height: 100vh;
+}
+.Nav-Bar{
+    background: rgba(11, 12, 16, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+@keyframes underscoreAnimation {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.underscore{
+    animation-name: underscoreAnimation;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+.main-ctn{
+    flex: 1;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    margin-right: 16px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+    text-shadow: 
+    0 0 5px var(--neon-green),
+    0 0 10px var(--neon-green),
+    0 0 20px var(--neon-green),
+    0 0 40px var(--neon-green);
+}
+.Regist-btn-nav{
+    color: var(--dk-bg);
+    background-color: var(--neon-green);
+    box-shadow: 
+    0 0 20px var(--neon-green),
+    0 0 50px var(--neon-green),
+    inset 0 0 50px var(--neon-green);
+}
+.Regist-btn-nav:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+.Hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.HERO-H1{
+    font-family: "Orbitron";
+}
+.teamDiscre{
+    font-family: "Roboto",sans-serif;
+    letter-spacing: 2px;
+}
+#connected-dots{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #0f172a;
+}
+.greenEagles{
+    color: #fff;
+    text-shadow: 
+    0 0 5px var(--neon-green),
+    0 0 10px var(--neon-green),
+    0 0 20px var(--neon-green),
+    0 0 40px var(--neon-green);
+}
+.becomeMember-btn{
+    color: var(--neon-green);
+    background: transparent;
+    border: 2px solid var(--neon-green);
+    box-shadow: 
+    0 0 5px var(--neon-green),
+    inset 0 0 5px var(--neon-green);
+    transition: 0.3s;
+    padding: 10px;
+    font-size: large;
+}
+.becomeMember-btn:hover{
+    background-color: var(--neon-green);
+    color: var(--dk-bg);
+    box-shadow: 
+    0 0 20px var(--neon-green),
+    0 0 50px var(--neon-green),
+    inset 0 0 50px var(--neon-green);
+    cursor: pointer;
+}
+svg{
+    fill: var(--neon-green);
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 5px var(--neon-green));
+}
+.cardContainers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    
+}
+.Card{
+    background: var(--glassy-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-color);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.Card h3{
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.Card p{
+    font-family: 'Roboto Mono', monospace;
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.Card:hover{
+    transform: translateY(-10px);
+    border-color: var(--neon-green);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+.Card:hover h3{
+    text-shadow: 0 0 8px var(--neon-green);
+}
+@media (max-width:768px) {
+    .cardContainers{
+        grid-template-columns: 1fr;
+    }
+    .roadmapGrid{
+        grid-template-columns: 1fr;
+    }
+}
+.roadmapGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.roadmapCard{
+    background: var(--glassy-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    min-height: 180px;
+}
+.roadmapCard h3{
+    font-family: 'Orbitron',sans-serif;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--card-color);
+    padding-bottom: 0.5rem;
+}
+.roadmapCard ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.roadmapCard li{
+    font-family: 'Roboto Mono', sans-serif;
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.roadmapCard li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--neon-green);
+}
+.roadmapCard li span{
+    color: #666;
+    margin-right: 5px;
+}
+.teamSection{
+    padding: 3rem 0;
+}
+.teamGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: start;
+}
+.teamCard{
+    background: var(--glassy-bg);
+    border: 1px solid var(--card-color);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 0 1.5rem;
+    height: 80px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.176, 0.884, 0.32, 1.274),border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+}
+.memberName{
+    font-family: 'Orbitron',sans-serif;
+    color: #fff;
+    font-size: 1.4rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: 0.3s;
+}
+.hiddenInfo{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+}
+.role{
+    color: var(--neon-green);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+.desc{
+    color: #aaa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.socials{
+    margin-top: 1rem;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px solid var(--card-color);
+    padding-top: 10px;
+}
+.teamCard:hover{
+    height: 250px;
+    border-color: var(--neon-green);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+    z-index: 10;
+}
+.teamCard:hover .memberName{
+    color: var(--neon-green);
+    text-shadow: 0 0 10px var(--neon-green);
+    height: 60px;
+}
+.teamCard:hover .hiddenInfo{
+    opacity: 1;
+    transform: translateY(0);
+}

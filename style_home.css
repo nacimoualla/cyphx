@@ -11,15 +11,22 @@ body{
     min-height: 100vh;
 }
 .Nav-Bar{
-    background: rgba(11, 12, 16, 0.7);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+    background: rgba(11, 12, 16, 0.85);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 0;
-    width: 100%;
+    border-radius: 15px;
+    left: 50%;
+    top: 20px;
+    width: 90%;
+    transform: translateX(-50%);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
+    padding: 0 2.7rem;
+    height: 70px;
+    align-items: center;
 }
 @keyframes underscoreAnimation {
     0% {opacity: 1;}
@@ -73,7 +80,12 @@ a:hover{
     flex-direction: column;
 }
 .HERO-H1{
-    font-family: "Orbitron";
+    font-family: "Orbitron",sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 .teamDiscre{
     font-family: "Roboto",sans-serif;
@@ -89,12 +101,10 @@ a:hover{
     background: #0f172a;
 }
 .greenEagles{
-    color: #fff;
-    text-shadow: 
-    0 0 5px var(--neon-green),
-    0 0 10px var(--neon-green),
-    0 0 20px var(--neon-green),
-    0 0 40px var(--neon-green);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--neon-green);
+    text-shadow: 0 0 20px var(--neon-green);
+    position: relative;
 }
 .becomeMember-btn{
     color: var(--neon-green);

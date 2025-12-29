@@ -1,8 +1,8 @@
-
-        const canvas = document.getElementById("connected-dots")
-        const ctx = canvas.getContext("2d")
-        canvas.height = window.innerHeight
-        canvas.width = window.innerWidth
+const canvas = document.getElementById("connected-dots")
+const ctx = canvas.getContext("2d")
+const regBtn = document.getElementById("register-btn-js")
+canvas.height = window.innerHeight
+canvas.width = window.innerWidth
         let particlesArray = []
         const particlesNumber = 150
         class Particle {
@@ -67,3 +67,6 @@
             particlesArray = []
             init()
         })
+regBtn.addEventListener('click',function(){
+    window.location.href = 'register_page.html'
+})

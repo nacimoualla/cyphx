@@ -386,6 +386,56 @@ svg{
     width: 100%;
     transition: 0.3s;
 }
+.memberDesc{
+    color: #aaa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+/* links container */
+.memberLinks{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--card-color);
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* each link */
+.memberLinks a{
+    color: #888;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* underline animation */
+.memberLinks a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 1px;
+    background: var(--neon-green);
+    transition: 0.3s;
+}
+
+/* hover effect */
+.memberLinks a:hover{
+    color: var(--neon-green);
+    text-shadow: 0 0 6px var(--neon-green);
+}
+
+.memberLinks a:hover::after{
+    width: 100%;
+}
+
 .hiddenInfo{
     opacity: 0;
     transform: translateY(20px);

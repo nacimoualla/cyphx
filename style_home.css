@@ -600,3 +600,17 @@ footer{
     flex-direction: column;
     gap: 15px;
 }
+button:disabled {
+    opacity: 0.2; 
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(40%);
+}
+
+
+button:disabled:hover {
+    background: transparent;
+    color: var(--neon-green);
+    box-shadow: none;
+    transform: none;
+}

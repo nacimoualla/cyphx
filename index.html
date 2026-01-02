@@ -6,7 +6,7 @@
     <title>Green Eagles</title>
     <link rel="icon" type="image/png" href="teamlogo.png">
     <link rel="stylesheet" href="style_home.css">
-    <link rel="stylesheet" href="mobile_style.css">
+    <link rel="stylesheet" href="mobile_style.css" media="(max-width: 480px)">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
@@ -14,16 +14,20 @@
 <body>
     <nav class="Nav-Bar">
         <h1 class="logo-nav">GREEN_EAGLES<span class="underscore"> _</span></h1>
-        <ul class="navlinks">
+        <ul class="navlinks" id="navlinks">
             <li><a href="http://" target="" rel="">About</a></li>
             <li><a href="http://" target="" rel="">Contact</a></li>
             <li><button class="Regist-btn-nav" disabled>Register</button></li>
         </ul>
+        <button id="humburgerBtn" class="humburger" onclick="this.classList.toggle('active')">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </nav>
     <main class="main-ctn">
     <div class="Hero">
     <canvas id="connected-dots"></canvas>
-
     <div class="hero-overlay"></div>
 
     <h1 class="Hero-H1">
@@ -31,7 +35,7 @@
     </h1>
     
     <div class="typingEffectCtn">
-        <p class="teamDiscre">Innovators, Coders, Builders.</p>
+        <p class="teamDiscre">Coders, Builders.</p>
     </div>
 
     <button class="becomeMember-btn" disabled>Become a member</button>
@@ -143,5 +147,6 @@
       2.make the register new members page
   -->
      <script src="dotLogic.js"></script>
+     <script src="navMenu.js"></script>
   </body>
   </html>

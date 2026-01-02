@@ -28,6 +28,9 @@ body{
     height: 70px;
     align-items: center;
 }
+.humburger{
+    display: none;
+}
 .navlinks{
     list-style: none;
     padding: 0;

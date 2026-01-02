@@ -7,18 +7,25 @@ humburger.addEventListener('click',() =>{
 })
 const teamCard = document.querySelectorAll('.teamCard')
 const cardService = document.querySelectorAll('.Card')
+function isMobile(){
+    return window.innerWidth <= 768;
+}
 teamCard.forEach(card =>{
     card.addEventListener('click', () =>{
-        teamCard.forEach(c =>{
+        if (isMobile()) {
+            teamCard.forEach(c =>{
             if(c !== card){
                 c.classList.remove('active')
             }
         })
         card.classList.toggle('active')
+        }
     })
 })
 cardService.forEach(card =>{
     card.addEventListener('click',()=>{
-        card.classList.toggle('active')
+        if (isMobile()){
+            card.classList.toggle('active')
+        }
     })
 })

@@ -10,6 +10,9 @@ body{
     margin: 0;
     min-height: 100vh;
 }
+.humburger{
+    display: none;
+}
 .Nav-Bar{
     background: rgba(11, 12, 16, 0.85);
     backdrop-filter: blur(15px);
@@ -299,7 +302,7 @@ svg{
     border-radius: 10px;
     padding: 1.5rem;
     min-height: 180px;
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -375,8 +378,7 @@ svg{
     justify-content: flex-start;
     cursor: pointer;
     position: relative;
-    width: 100%;
-    max-width: 1500px;
+    width: 75rem;
     margin-left: 150px;
 }
 .memberName{
@@ -394,7 +396,7 @@ svg{
     font-family: 'Roboto', sans-serif;
     font-size: 0.95rem;
     line-height: 1.5;
-    margin: 0 0 15px 0;
+    margin: 10px 0 15px 0;
 }
 
 /* links container */

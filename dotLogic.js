@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d")
 canvas.height = window.innerHeight
 canvas.width = window.innerWidth
         let particlesArray = []
-        const particlesNumber = 150
+        var particlesNumber = 150
         class Particle {
             constructor()
             {
@@ -32,6 +32,9 @@ canvas.width = window.innerWidth
             }
         }
         function init(){
+            if (window.innerWidth < 480){
+                particlesNumber = 50
+            }
             for (let i = 0; i < particlesNumber; i++){
                 particlesArray.push(new Particle());
             }

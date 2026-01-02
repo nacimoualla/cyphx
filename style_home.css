@@ -393,7 +393,6 @@ svg{
     cursor: pointer;
     position: relative;
     width: 75rem;
-    margin-left: 150px;
 }
 .memberName{
     font-family: 'Orbitron',sans-serif;

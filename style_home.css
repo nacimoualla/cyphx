@@ -453,7 +453,14 @@ svg{
 .memberLinks a:hover::after{
     width: 100%;
 }
-
+.Card:hover, .Card.active {
+    transform: translateY(-10px);
+    border-color: var(--neon-green);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+.Card:hover h3, .Card.active h3 {
+    text-shadow: 0 0 8px var(--neon-green);
+}
 .hiddenInfo{
     opacity: 0;
     transform: translateY(20px);
@@ -480,19 +487,19 @@ svg{
     border-top: 1px solid var(--card-color);
     padding-top: 10px;
 }
-.teamCard:hover{
+.teamCard:hover, .teamCard.active{
     height: 250px;
     border-color: var(--neon-green);
     background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
     z-index: 10;
 }
-.teamCard:hover .memberName{
+.teamCard:hover, .teamCard.active .memberName{
     color: var(--neon-green);
     text-shadow: 0 0 10px var(--neon-green);
     height: 60px;
 }
-.teamCard:hover .hiddenInfo{
+.teamCard:hover, .teamCard.active .hiddenInfo{
     opacity: 1;
     transform: translateY(0);
 }

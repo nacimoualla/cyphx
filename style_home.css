@@ -16,6 +16,7 @@ body{
 .Nav-Bar{
     background: rgba(11, 12, 16, 0.85);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(0, 255, 0, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -134,6 +135,7 @@ a:hover{
 }
 .Hero{
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +154,9 @@ a:hover{
     letter-spacing: 5px;
     margin-bottom: 10px;
     z-index: 2;
+}
+button{
+    -webkit-appearance: none;
 }
 .hero-overlay{
     position: absolute;
@@ -256,6 +261,7 @@ svg{
 .Card{
     background: var(--glassy-bg);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--card-color);
     border-radius: 15px;
     padding: 2rem;
@@ -296,6 +302,7 @@ svg{
 .roadmapCard{
     background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, var(--glassy-bg));
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--card-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     border-top: 3px solid var(--neon-green);
@@ -347,15 +354,21 @@ svg{
     margin-right: 5px;
 }
 .teamSection{
-    padding: 3rem 0;
+    width: 100%;
+    padding: 20px 0;
 }
-.teamSection .sectionTitle{
-    width: 350px;
-    margin-left: 1.5rem;
+.teamSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
 .section-title{
-    width: 350px;
-    margin-left: 1.5rem;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
 }
 .teamGrid{
     display: flex;
@@ -368,6 +381,7 @@ svg{
     background: var(--glassy-bg);
     border: 1px solid var(--card-color);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 0 1.5rem;
     height: 80px;
@@ -379,7 +393,6 @@ svg{
     cursor: pointer;
     position: relative;
     width: 75rem;
-    margin-left: 150px;
 }
 .memberName{
     font-family: 'Orbitron',sans-serif;
@@ -519,6 +532,7 @@ footer{
 .registerCard{
     background: var(--glassy-bg);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid var(--card-color);
     border-radius: 15px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
